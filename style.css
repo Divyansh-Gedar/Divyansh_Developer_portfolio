@@ -1458,8 +1458,8 @@ nav ul li #anchor,
   text-align: center;
   margin-bottom: -40px;
   background-color: #f8f9fa;
-  width: 100% !important;
-  margin-left: 0;
+  width: 140% !important;
+  margin-left: -20% !important;
 }
 #footer_h{
   font-size: 25px;
