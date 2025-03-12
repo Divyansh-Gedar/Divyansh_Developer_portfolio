@@ -1,33 +1,33 @@
+window.onload = function() {
+  if (window.innerWidth <= 1024) {
+    document.getElementById("hamburger").style.display = "none";
+    document.getElementById("introduction").style.marginTop = "0";
+  }
+};
+
 document.getElementById("introduction").style.marginTop = 0;
-document.getElementById("hamburger").style.display = "none";
-
-
-check_value = document.getElementById("check").checked;
 
 
 function margin_check() {
-  console.log("Function margin_check() is running!");
-
   let check_value = document.getElementById("check").checked;
-  console.log("Checkbox checked:", check_value);
-  
   let navbar_height = document.getElementById("hamburger").offsetHeight;
-  console.log("Navbar height:", navbar_height);
 
-  // Corrected ID selection
-  document.getElementById("home_anchor").style.color = "black";
-
-  // Set margin correctly
-  if (check_value) {
-      document.getElementById("hamburger").style.display = "block";
-      document.getElementById("introduction").style.marginTop = navbar_height + "px";
-
-
-    } else {
-      document.getElementById("introduction").style.marginTop = 0;
-      document.getElementById("hamburger").style.display = "none";
+  if (window.innerWidth <= 1024) {  // Only for mobile
+      if (check_value) {
+          document.getElementById("hamburger").style.display = "block";
+          document.getElementById("introduction").style.marginTop = navbar_height + "px";
+      } else {
+          document.getElementById("hamburger").style.display = "none";
+          document.getElementById("introduction").style.marginTop = "0";
+      }
+  } else {
+      document.getElementById("hamburger").style.display = "block"; // Always visible on desktop
   }
-} document.getElementById("introduction").offsetHeight;
+}
+
+// Run when window resizes (fixes issue when switching between mobile & desktop)
+window.addEventListener("resize", margin_check);
+
 
 
 
@@ -41,7 +41,6 @@ const firebaseConfig = {
   messagingSenderId: "453878723274",
   appId: "1:453878723274:web:92c52e00c40b43f16cfa33"
 };
-
 
 
 firebase.initializeApp(firebaseConfig);
@@ -65,7 +64,6 @@ function save(){
     message:message
   })
   
-
 
 
 

@@ -114,6 +114,9 @@ nav ul li #anchor,
 
 
   }
+  nav ul li{
+    margin-right:6%;
+  }
 
 
   nav ul #home_anchor {
@@ -1450,8 +1453,8 @@ nav ul li #anchor,
   text-align: center;
   margin-bottom: -40px;
   background-color: #f8f9fa;
-  width: 106.4% !important;
-  margin-left: -3.25%;
+  width: 150% !important;
+  margin-left: -25%;
 }
 #footer_h{
   font-size: 25px;
