@@ -1,0 +1,1473 @@
+body {
+  font-family: cursive;
+  background-color: #f8f9fa;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+}
+
+
+#br {
+  display: none;
+}
+
+nav {
+  width: 100%;
+  height: 80px;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+
+}
+
+label.logo {
+  font-size: 27px;
+  color: white;
+  margin: 0 20px;
+  /* Adjust margin as needed */
+  line-height: 80px;
+  vertical-align: middle;
+  float: left;
+  margin-left: 10% !important;
+}
+
+nav ul {
+  list-style-type: none;
+  float: right;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin-left: 20px;
+  /* Adjust margin as needed */
+}
+
+nav ul li #anchor,
+#home_anchor {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  text-transform: capitalize;
+  padding: 0 20px;
+  display: block;
+}
+
+#home_anchor,
+#anchor:hover {
+  text-decoration: underline;
+  color: white;
+  animation-name: hover_ani;
+  /* Specify the name of the keyframes animation */
+  animation-duration: 2s;
+  font-size: 25px;
+}
+
+@keyframes hover_ani {
+  0% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+#checkbtn {
+  display: none;
+  margin-top: 20px;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  label.logo {
+    display: block;
+    margin: 0;
+    line-height: 80px;
+    text-align: center;
+  }
+
+  nav ul {
+    position: relative;
+    width: 100%;
+    top: 0px;
+    /* Adjusted to leave space for the sections above */
+    left: 0px !important;
+    background-color: #f8f9fa;
+    transition: left 0.5s ease !important;
+    transition-delay: 3s !important;
+
+
+  }
+
+
+  nav ul #home_anchor {
+    background-color: #f8f9fa;
+    color: white;
+    left: 0;
+  }
+
+  #check:checked~ul {
+    left: 0;
+  }
+
+  #checkbtn {
+    display: block;
+    float: right;
+    line-height: 80px;
+    margin-right: 20px;
+    /* Adjust margin as needed */
+    font-size: 30px;
+    color: white;
+  }
+
+  nav ul li {
+    display: block;
+    text-align: center;
+    line-height: 100px;
+
+  }
+  nav ul li label a{
+    font-size: xx-large !important;
+  }
+}
+
+
+
+
+@media(max-width: 515px) {
+
+  /* Adjust styles for mobile devices */
+  label.logo {
+    font-size: 15px;
+  }
+
+
+  /* Other responsive styles go here */
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+
+  /* Adjust styles for tablets */
+  label.logo {
+    font-size: 27px;
+  }
+
+  /* Other responsive styles go here */
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+  /* Adjust styles for laptops */
+  label.logo {
+    font-size: 27px;
+  }
+
+
+  /* Other responsive styles go here */
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+
+  /* Adjust styles for desktops */
+  label.logo {
+    margin-left: 0px;
+    font-size: 18px;
+  }
+
+  /* Other responsive styles go here */
+}
+
+@media screen and (min-width: 1200px) {
+
+  /* Adjust styles for extra-large screens */
+  label.logo {
+    font-size: 32px;
+  }
+
+  /* Other responsive styles go here */
+}
+
+#introduction {
+  text-align: center;
+  position: relative;
+  background-color: #f8f9fa;
+  margin-top: 0px !important;
+  box-shadow: 1px 1px 5px grey;
+  overflow: hidden;
+  width: 100%;
+  height: 70%;
+  margin-top: 0px !important;
+  
+}
+#about{
+  margin-top: 0px !important;
+}
+
+.divya_h1 {
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: bold;
+  font-size: 200%;
+  display: inline-block;
+  color: black;
+  animation-name: animation;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  margin-top: -3%;
+}
+
+
+@keyframes animation {
+  0% {
+    text-shadow: 0px 0px 10px rgb(255, 0, 0);
+  }
+
+  25% {
+    text-shadow: 0px 0px 10px rgb(255, 187, 0);
+  }
+
+  50% {
+    text-shadow: 0px 0px 10px rgb(0, 255, 123);
+  }
+
+  75% {
+    text-shadow: 0px 0px 10px rgb(140, 0, 255);
+  }
+
+  100% {
+    text-shadow: 0px 0px 10px rgb(255, 0, 149);
+  }
+}
+
+.divya_p {
+  color: black;
+  margin-left: 7%;
+  margin-top: 2%;
+  font-size: 20px;
+  text-align: justify;
+  text-justify: inter-word;
+  margin-right:10%;
+}
+#about_id{
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Circular images section starts */
+
+.image-carousel {
+  width: 560px;
+  /* Adjust width as needed */
+  height: 490px;
+  /* Adjust height as needed */
+  position: relative;
+  /* Needed for positioning buttons */
+  overflow: hidden;
+  /* Hide overflowing content */
+  float: right;
+  margin-bottom: 3%;
+}
+
+.image-carousel img {
+  width: 150px;
+  /* Adjust image size as needed */
+  height: 150px;
+  /* Adjust image size as needed */
+  border-radius: 50%;
+  /* Round corners */
+  object-fit: cover;
+  /* Crop images to fit container */
+  position: relative;
+  /* Absolute positioning for overlapping */
+  top: 50%;
+  /* Center vertically */
+  left: 50%;
+  /* Center horizontally */
+  transform: translate(-50%, -50%);
+  /* Adjust initial position */
+  transition: transform 0.5s ease-in-out;
+  /* Smooth transition for sliding */
+  box-shadow: 1px 1px 5px grey;
+}
+
+.prev-button,
+.next-button {
+  position: relative;
+  top: 50%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  /* Indicate clickable button */
+  color: white;
+  font-size: 30px;
+}
+
+.prev-button {
+  position: relative;
+  left: 80%;
+  margin-top: 5%;
+}
+
+.next-button {
+  position: relative;
+  left: 85%;
+  margin-top: 5%;
+}
+
+
+/* OTHER SECTION STYLE */
+
+/* Section styles */
+
+#AboutMe {
+  background-color: #f8f9fa;
+  position: relative;
+  text-align: center;
+  font-family: cursive;
+  color: black;
+  font-weight: bold;
+  text-shadow: 5px 5px 5px grey;
+  text-align: center;
+}
+
+#logo_img {
+  width: 150px;
+  height: 150px;
+  border-radius: 200px;
+  box-shadow: 5px 5px 5px grey;
+
+}
+
+#about_p {
+  font-size: 30px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-right: 40px;
+  text-shadow: none;
+  width: 100%;
+}
+
+/* section projects */
+
+#projects_h {
+  color: white;
+  width: 100%;
+  margin-right: 20px;
+}
+
+#Projects {
+  text-align: center;
+  background-color: rgb(76, 78, 92);
+}
+
+#myCarousel {
+  background-color: rgb(0, 0, 0);
+}
+
+#myCarousel img {
+  height: 300px;
+  margin-top: 35px;
+}
+
+.carousel-inner p {
+  margin-bottom: 15px;
+  margin-top: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+#myCarousel {
+  background-color: rgb(76, 78, 92);
+}
+
+#myCarousel img {
+  height: 300px;
+  margin-top: 35px;
+  border-radius: 200px;
+  cursor: pointer;
+}
+
+.carousel-inner p {
+  margin-bottom: 15px;
+  margin-top: 15px;
+  color: black;
+  font-size: 20px;
+}
+
+#divya_image {
+  cursor: pointer;
+}
+
+.left-carousel-control {
+  line-height: 300px;
+}
+
+
+.panel {
+  background-color: blue;
+}
+
+.achievements-container {
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color:  #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+/* section testimonials */
+
+#Testimonials_h {
+  color: black;
+  text-decoration: wavy;
+  padding-bottom: 3%;
+}
+
+#Testimonials {
+  text-align: center;
+  padding-top: 3%;
+  padding-bottom: 40px;
+  text-shadow: 5px 5px 5px grey;
+}
+
+#test_div {
+  position: relative;
+  height: 350px;
+  width: 25%;
+  padding: 10px;
+  border: solid;
+  border-width: 0;
+  animation-name: div_animation;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  margin-left: 5%;
+}
+
+#test2_div {
+  position: relative;
+  width: 25%;
+  height: 350px;
+  padding: 10px;
+  border: solid;
+  border-width: 0;
+  animation-name: div_animation2;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  margin-left: 38%;
+  margin-top:-25.9%;
+}
+
+#test3_div {
+  position: relative;
+  width: 25%;
+  height: 350px;
+  padding: 10px;
+  border: solid;
+  border-width: 0;
+  margin-left: 70%;
+  animation-name: div_animation3;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  margin-top:-25.9%;
+}
+
+@keyframes div_animation {
+  0% {
+    box-shadow: 0px 0px 30px rgb(186, 111, 111);
+  }
+
+  12.5% {
+    box-shadow: 0px 0px 30px red;
+  }
+
+  25% {
+    box-shadow: 0px 0px 30px rgb(246, 255, 0);
+  }
+
+  37.5% {
+    box-shadow: 0px 0px 30px rgb(0, 255, 72);
+  }
+
+  50% {
+    box-shadow: 0px 0px 30px rgb(0, 225, 255);
+  }
+
+  62.5% {
+    box-shadow: 0px 0px 30px rgb(51, 0, 255);
+  }
+
+  75% {
+    box-shadow: 0px 0px 30px rgb(255, 0, 212);
+  }
+
+  87.5% {
+    box-shadow: 0px 0px 30px rgb(0, 145, 255);
+  }
+
+  100% {
+    box-shadow: 0px 0px 30px rgb(51, 0, 255);
+  }
+
+}
+
+
+@keyframes div_animation2 {
+  0% {
+    box-shadow: 0px 0px 30px rgb(186, 111, 111);
+  }
+
+  12.5% {
+    box-shadow: 0px 0px 30px rgb(0, 51, 255);
+  }
+
+  25% {
+    box-shadow: 0px 0px 30px rgb(18, 229, 11);
+  }
+
+  37.5% {
+    box-shadow: 0px 0px 30px rgb(255, 0, 204);
+  }
+
+  50% {
+    box-shadow: 0px 0px 30px rgb(255, 0, 0);
+  }
+
+  62.5% {
+    box-shadow: 0px 0px 30px rgb(255, 217, 0);
+  }
+
+  75% {
+    box-shadow: 0px 0px 30px rgb(0, 251, 255);
+  }
+
+  87.5% {
+    box-shadow: 0px 0px 30px rgb(0, 255, 123);
+  }
+
+  100% {
+    box-shadow: 0px 0px 30px rgb(240, 0, 132);
+  }
+
+}
+
+
+@keyframes div_animation3 {
+  0% {
+    box-shadow: 0px 0px 30px rgb(186, 111, 111);
+  }
+
+  12.5% {
+    box-shadow: 0px 0px 30px rgb(37, 255, 22);
+  }
+
+  25% {
+    box-shadow: 0px 0px 30px rgb(255, 174, 0);
+  }
+
+  37.5% {
+    box-shadow: 0px 0px 30px rgb(255, 0, 0);
+  }
+
+  50% {
+    box-shadow: 0px 0px 30px rgb(145, 18, 161);
+  }
+
+  62.5% {
+    box-shadow: 0px 0px 30px rgb(145, 246, 5);
+  }
+
+  75% {
+    box-shadow: 0px 0px 30px rgb(195, 12, 245);
+  }
+
+  87.5% {
+    box-shadow: 0px 0px 30px rgb(0, 145, 255);
+  }
+
+  100% {
+    box-shadow: 0px 0px 30px rgb(51, 0, 255);
+  }
+
+}
+
+
+#test_p {
+  font-size: larger;
+  text-shadow: none;
+}
+
+#test2_p {
+  font-size: larger;
+  text-shadow: none;
+}
+
+#test3_p {
+  font-size: larger;
+  text-shadow: none;
+}
+
+
+/* section contact */
+
+
+#contact {
+  padding: 40px 40px 40px 40px;
+  background-image: url("contact_bg.jpg");
+  /* Replace with your image path */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  /* Assuming light text on a dark background image */
+  text-align: center !important;
+}
+
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+}
+
+#contact-form label {
+  margin-bottom: 5px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#contact-form textarea {
+  height: 100px;
+}
+
+#contact-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#contact-form button:hover {
+  background-color: #ddd;
+  color: #333;
+}
+
+#name {
+  color: black;
+}
+
+#email {
+  color: black;
+}
+
+#message {
+  color: black;
+}
+
+@media(max-width: 515px) {
+
+  .divya_h1 {
+    font-size: 300% !important;
+  }
+
+
+  #test_div {
+    position: relative;
+    height: 300px;
+    width: 90%;
+    padding: 10px;
+    border: solid;
+    border-width: 0;
+    animation-name: div_animation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 40% !important;
+  }
+
+  #test2_div {
+    position: relative;
+    width: 90%;
+    height: 350px;
+    padding: 10px;
+    border: solid;
+    border-width: 0;
+    animation-name: div_animation2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 40px;
+    margin-bottom: 40% !important;
+  }
+
+  #test3_div {
+    position: relative;
+    width: 90%;
+    height: 350px;
+    padding: 10px;
+    border: solid;
+    border-width: 0;
+    animation-name: div_animation3;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    margin-left: 5%;
+    margin-right: 5%;
+
+  }
+
+  #test_p {
+    font-size: larger;
+    text-shadow: none;
+  }
+
+  #test2_p {
+    font-size: larger;
+    text-shadow: none;
+  }
+
+  #test3_p {
+    font-size: larger;
+    text-shadow: none;
+  }
+
+
+  #about_p {
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-right: 5%;
+    margin-right: 40px;
+  }
+
+  .image-carousel {
+    display: none;
+  }
+
+  #divya_p_br {
+    display: none;
+  }
+
+  #introduction {
+    text-align: center;
+    height: fit-content;
+    padding-bottom: 10px;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  textarea {
+    width: 100%;
+  }
+  .prev-button,
+  .next-button {
+    display: none;
+  }
+  #Contact {
+    text-align: center;
+  }
+
+  .divya_p {
+    font-size: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  #Contact {
+    text-align: center;
+
+  }
+  #br{
+    display: block;
+  }
+  nav ul li label a{
+    color:black !important;
+
+
+}
+
+
+}
+
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .divya_h1 {
+    font-size: 300% !important;
+  }
+  nav ul li label a{
+    color:black !important;
+    height:fit-content;
+
+
+  }
+  .divya_h2 {
+    font-size: 300% !important;
+    margin-bottom: 200px;
+  }
+
+  #test_div {
+    position: relative;
+    height: 350px;
+    width: 90%;
+    padding: 10px;
+    border: solid;
+    border-width: 0;
+    animation-name: div_animation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 40% ;
+  }
+
+  #test2_div {
+    position: relative;
+    width: 90%;
+    height: 350px;
+    padding: 10px;
+    border: solid;
+    border-width: 0;
+    animation-name: div_animation2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 40%;
+  }
+
+  #test3_div {
+    position: relative;
+    width: 90%;
+    height: 350px;
+    padding: 10px;
+    border: solid;
+    border-width: 0;
+    animation-name: div_animation3;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  #test_p {
+    font-size: 150%;
+    text-shadow: none;
+  }
+
+  #test2_p {
+    font-size: 150%;
+    text-shadow: none;
+  }
+
+  #test3_p {
+    font-size: 150%;
+    text-shadow: none;
+  }
+
+
+  #about_p {
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-right: 5%;
+    margin-right: 40px;
+  }
+
+  .image-carousel {
+    display: none;
+  }
+
+  #divya_p_br {
+    display: none;
+  }
+
+  #introduction {
+    text-align: center;
+    height: fit-content;
+    padding-bottom: 10px;
+    margin-top: 0px !important;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  #Contact {
+    text-align: center;
+  }
+
+  .divya_p {
+    font-size: 200%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  #Contact {
+    text-align: center;
+  }
+  .prev-button,
+  .next-button {
+    display: none;
+  }
+
+  #br{
+    display: block;
+  }
+}
+
+
+
+
+@media screen and (min-width: 1050px) and (max-width: 1200px) {
+  .divya_h1 {
+    font-size: 300% !important;
+  }
+
+  .divya_h2 {
+    font-size: 300% !important;
+  }
+
+  #test_div {
+    position: relative;
+    height: 350px;
+    width: 90%;
+    padding: 10px;
+    border: solid;
+    border-width: 0;
+    animation-name: div_animation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 30% ;
+  }
+
+  #test2_div {
+    position: relative;
+    width: 90%;
+    height: 350px;
+    padding: 10px;
+    border: solid;
+    border-width: 0;
+    animation-name: div_animation2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 30% ;
+  }
+
+  #test3_div {
+    position: relative;
+    width: 90%;
+    height: 350px;
+    padding: 10px;
+    border: solid;
+    border-width: 0;
+    animation-name: div_animation3;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  #test_p {
+    font-size: 30px;
+    text-shadow: none;
+  }
+
+  #test2_p {
+    font-size: 30px;
+    text-shadow: none;
+  }
+
+  #test3_p {
+    font-size: 30px;
+    text-shadow: none;
+  }
+
+  #about_h1 {
+    font-size: 70px;
+  }
+
+  #about_p {
+    font-size: xx-large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-right: 5%;
+    margin-right: 40px;
+  }
+
+  .image-carousel {
+    display: none;
+  }
+
+  #divya_p_br {
+    display: none;
+  }
+
+  #introduction {
+    text-align: center;
+    height: fit-content;
+    padding-bottom: 10px;
+    margin-top: 0px !important;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  #Contact {
+    text-align: center;
+  }
+
+  .divya_p {
+    font-size: 200%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  #br {
+    display: inline;
+  }
+  .prev-button,
+  .next-button {
+    display: none;
+  }
+
+  #projects_img_p {
+    font-size: xx-large;
+  }
+
+  #projects_h {
+    font-size: 70px;
+  }
+
+  .logo {
+    margin-left: 0px;
+    float: left;
+  }
+  #br{
+    display: block;
+  }
+
+}
+
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Styles for medium tablets */
+
+  .divya_h1 {
+    font-size: 300% !important;
+
+  }
+  nav ul li label a{
+    color:black !important;
+
+
+  }
+
+
+  #test_div {
+    position: relative;
+    height: 350px;
+    width: 90%;
+    padding: 10px;
+    border: solid;
+    border-width: 0;
+    animation-name: div_animation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 40% ;  
+  }
+
+  #test2_div {
+    position: relative;
+    width: 90%;
+    height: 350px;
+    padding: 10px;
+    border: solid;
+    border-width: 0;
+    animation-name: div_animation2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 40% ;
+  }
+
+  #test3_div {
+    position: relative;
+    width: 90%;
+    height: 350px;
+    padding: 10px;
+    border: solid;
+    border-width: 0;
+    animation-name: div_animation3;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  #test_p {
+    font-size: 28px;
+    text-shadow: none;
+  }
+
+  #test2_p {
+    font-size: 28px;
+    text-shadow: none;
+  }
+
+  #test3_p {
+    font-size: 28px;
+    text-shadow: none;
+  }
+
+  #about_h1 {
+    font-size: 70px;
+  }
+
+  #about_p {
+    font-size: xx-large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-right: 5%;
+    margin-right: 40px;
+  }
+
+  .image-carousel {
+    display: none;
+  }
+
+  #divya_p_br {
+    display: none;
+  }
+
+  #introduction {
+    text-align: center;
+    height: fit-content;
+    padding-bottom: 10px;
+    margin-top: -30% !important;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  #Contact {
+    text-align: center;
+
+  }
+
+  .divya_p {
+    font-size: 200%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  #br {
+    display: inline;
+  }
+
+
+  #projects_img_p {
+    font-size: xx-large;
+  }
+
+  #projects_h {
+    font-size: 70px;
+  }
+  .prev-button,
+  .next-button {
+    display: none;
+  }
+  #br{
+    display: block;
+  }
+
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1060px) {
+  #br{
+    display: block;
+  }
+  .logo {
+    font-size: 18px;
+  }
+  .prev-button,
+  .next-button {
+    display: none;
+  }
+  .divya_h1 {
+    font-size: 300% !important;
+  }
+  #logo{
+    width:20% !important;
+    height: 20% !important;
+  }
+  #introduction{
+    margin-top: 0px !important;
+  }
+  nav ul li label a{
+    color:white !important;
+    font-size:18px !important;
+    padding: 5px !important;
+  }
+  label.logo{
+    font-size:23px !important;
+  }
+  
+}
+@media screen and (min-width: 1060px) and (max-width: 1201px) {
+
+  
+  .divya_h1 {
+    font-size: 300% !important;
+  }
+
+  .divya_h2 {
+    font-size: 300% !important;
+  }
+
+  #test_div {
+    position: relative;
+    height: 350px;
+    width: 90%;
+    padding: 10px;
+    border: solid;
+    border-width: 0;
+    animation-name: div_animation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom:30% ;  
+  }
+
+  #test2_div {
+    position: relative;
+    width: 90%;
+    height: 350px;
+    padding: 10px;
+    border: solid;
+    border-width: 0;
+    animation-name: div_animation2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 30% ;
+  }
+
+  #test3_div {
+    position: relative;
+    width: 90%;
+    height: 350px;
+    padding: 10px;
+    border: solid;
+    border-width: 0;
+    animation-name: div_animation3;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  #test_p {
+    font-size: 28px;
+    text-shadow: none;
+  }
+
+  #test2_p {
+    font-size: 28px;
+    text-shadow: none;
+  }
+
+  #test3_p {
+    font-size: 28px;
+    text-shadow: none;
+  }
+
+  #about_h1 {
+    font-size: 70px;
+  }
+
+  #about_p {
+    font-size: xx-large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-right: 5%;
+    margin-right: 40px;
+  }
+
+  .image-carousel {
+    display: none;
+  }
+
+  #divya_p_br {
+    display: none;
+  }
+
+  #introduction {
+    text-align: center;
+    height: fit-content;
+    padding-bottom: 10px;
+    margin-top: 0px !important;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  #Contact {
+    text-align: center;
+
+  }
+
+  .divya_p {
+    font-size: 200%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  #br {
+    display: inline;
+  }
+
+  #projects_img_p {
+    font-size: xx-large;
+  }
+
+  #projects_h {
+    font-size: 70px;
+  }
+  .prev-button,
+  .next-button {
+    display: none;
+  }
+  #br{
+    display: block;
+  }
+  nav ul li label a{
+    color:white !important;
+    font-size:20px !important;
+    padding: 5px !important;
+  }
+  label.logo{
+    font-size:25px !important;
+  }
+
+
+}
+
+
+/* Desktops */
+@media (min-width: 1201px){
+  #introduction {
+    position: relative;
+    background-color: #f8f9fa;
+    margin-top: 0px !important;
+
+    overflow: hidden;
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 20px;
+    top: -20px;
+
+
+  }
+  nav ul li label a{
+    color:white !important;
+    font-size:20px !important;
+    padding: 5px !important;
+  }
+  label.logo{
+    font-size:25px !important;
+  }
+
+
+}
+
+/* Footer */
+#footer{
+  position: relative;
+  text-align: center;
+  margin-bottom: -40px;
+  background-color: #f8f9fa;
+  width: 106.4% !important;
+  margin-left: -3.25%;
+}
+#footer_h{
+  font-size: 25px;
+  color: black;
+  text-shadow: 5px 5px 5px grey;
+  font-family:'Cambria', 'Cochin', Georgia, Times, 'Times New Roman', serif;
+
+}
+i{
+  color: rgb(98, 0, 255);
+  font-size: x-large;
+  cursor: pointer;
+
+}
+
+#logo{
+  width:20%;
+  height: 20%;
+}
