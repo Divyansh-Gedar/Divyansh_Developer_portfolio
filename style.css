@@ -2,6 +2,11 @@ body {
   font-family: cursive;
   background-color: #f8f9fa;
 }
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
