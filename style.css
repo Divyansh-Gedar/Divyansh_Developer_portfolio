@@ -4,9 +4,15 @@ body {
 }
 html, body {
   overflow-x: hidden;
+  overflow-y: auto;
   width: 100%;
 }
-
+/* ::-webkit-scrollbar {
+  display: none;
+} */
+* {
+  overflow-x: hidden;
+}
 body {
   margin: 0;
   padding: 0;
@@ -32,7 +38,25 @@ nav {
   justify-content: center;
   align-items: center;
   background-color: black;
+  overflow: hidden;
+}
+.divya_h1 {
+  width: 100vw;  /* Full width of the viewport */
+  overflow: hidden; /* Hides any extra content */
+  white-space: nowrap; /* Prevents text from breaking */
+  text-overflow: ellipsis; /* Adds "..." if text overflows */
+}
 
+.fas.fa-envelope {
+  overflow: hidden; 
+  display: inline-block; /* Prevents it from breaking layout */
+  white-space: nowrap;
+}
+.glyphicon-chevron-left{
+  overflow: hidden;
+}
+.glyphicon-chevron-right{
+  overflow: hidden;
 }
 
 label.logo {
@@ -151,7 +175,7 @@ nav ul li #anchor,
 
   }
   nav ul li label a{
-    font-size: 12px !important;
+    font-size: xx-large !important;
   }
 }
 
@@ -423,7 +447,9 @@ nav ul li #anchor,
 .left-carousel-control {
   line-height: 300px;
 }
-
+#myCarousel{
+  overflow: hidden !important;
+}
 
 .panel {
   background-color: blue;
@@ -1475,6 +1501,10 @@ nav ul li #anchor,
   width: 140% !important;
   margin-left: 0;
   margin-left:-20%;
+  overflow: hidden;
+}
+#footer span a{
+  overflow: hidden;
 }
 #footer_h{
   font-size: 25px;
