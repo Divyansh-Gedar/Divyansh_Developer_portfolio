@@ -31,48 +31,7 @@ window.addEventListener("resize", margin_check);
 
 
 
-// Initialize Firebase
-const firebaseConfig = {
-  apiKey: "AIzaSyAaBLFPYmSD0Im1gU8ehfazg3qNA4d2xWU",
-  authDomain: "divyanshdevelop-portfolio.firebaseapp.com",
-  databaseURL: "https://divyanshdevelop-portfolio-default-rtdb.firebaseio.com",
-  projectId: "divyanshdevelop-portfolio",
-  storageBucket: "divyanshdevelop-portfolio.appspot.com",
-  messagingSenderId: "453878723274",
-  appId: "1:453878723274:web:92c52e00c40b43f16cfa33"
-};
 
-
-firebase.initializeApp(firebaseConfig);
-const database = firebase.database();
-
-function save(){
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const message = document.getElementById('message').value;
-
-
-
-  const formData = {
-    name: name,
-    email: email,
-    message: message
-};
-  database.ref(name + "users/").push().set({
-    name:name,
-    email:email,
-    message:message
-  })
-  
-
-
-
-
-window.alert("Thank You! We will notify soon!");
-document.getElementById('name').value = "";
-document.getElementById('email').value = "";
-document.getElementById('message').value = "";
-}
 
 
 

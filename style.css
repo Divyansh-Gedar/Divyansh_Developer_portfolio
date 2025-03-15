@@ -1,7 +1,11 @@
 body {
   font-family: cursive;
   background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
+
 html, body {
   overflow-x: hidden;
   overflow-y: auto;
@@ -11,11 +15,6 @@ html, body {
   display: none;
 } */
 * {
-  overflow-x: hidden;
-}
-body {
-  margin: 0;
-  padding: 0;
   overflow-x: hidden;
 }
 header {
@@ -686,48 +685,6 @@ nav ul li #anchor,
   margin: 0 auto;
 }
 
-#contact-form label {
-  margin-bottom: 5px;
-}
-
-#contact-form input,
-#contact-form textarea {
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-#contact-form textarea {
-  height: 100px;
-}
-
-#contact-form button {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
-  margin-top: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#contact-form button:hover {
-  background-color: #ddd;
-  color: #333;
-}
-
-#name {
-  color: black;
-}
-
-#email {
-  color: black;
-}
-
-#message {
-  color: black;
-}
 
 @media(max-width: 480px) {
 
@@ -820,13 +777,7 @@ nav ul li #anchor,
     padding-bottom: 10px;
   }
 
-  input {
-    width: 100%;
-  }
-
-  textarea {
-    width: 100%;
-  }
+  
   .prev-button,
   .next-button {
     display: none;
@@ -871,10 +822,6 @@ nav ul li #anchor,
     height:fit-content;
 
 
-  }
-  .divya_h2 {
-    font-size: 300% !important;
-    margin-bottom: 200px;
   }
 
   #test_div {
@@ -961,13 +908,7 @@ nav ul li #anchor,
     font-size: 12px;
   }
 
-  input {
-    width: 100%;
-  }
 
-  textarea {
-    width: 100%;
-  }
 
   #Contact {
     text-align: center;
@@ -1005,9 +946,6 @@ nav ul li #anchor,
     font-size: 300% !important;
   }
 
-  .divya_h2 {
-    font-size: 300% !important;
-  }
 
   #test_div {
     position: relative;
@@ -1095,13 +1033,7 @@ nav ul li #anchor,
     margin-top: 0px !important;
   }
 
-  input {
-    width: 100%;
-  }
 
-  textarea {
-    width: 100%;
-  }
 
   #Contact {
     text-align: center;
@@ -1242,13 +1174,6 @@ nav ul li #anchor,
     margin-top: -30% !important;
   }
 
-  input {
-    width: 100%;
-  }
-
-  textarea {
-    width: 100%;
-  }
 
   #Contact {
     text-align: center;
@@ -1325,9 +1250,6 @@ nav ul li #anchor,
     font-size: 300% !important;
   }
 
-  .divya_h2 {
-    font-size: 300% !important;
-  }
 
   #test_div {
     position: relative;
@@ -1415,13 +1337,7 @@ nav ul li #anchor,
     margin-top: 0px !important;
   }
 
-  input {
-    width: 100%;
-  }
 
-  textarea {
-    width: 100%;
-  }
 
   #Contact {
     text-align: center;
