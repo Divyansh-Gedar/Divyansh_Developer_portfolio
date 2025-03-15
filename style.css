@@ -1,9 +1,7 @@
 body {
   font-family: cursive;
   background-color: #f8f9fa;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+  overflow: hidden !important;
 }
 
 html, body {
@@ -16,20 +14,28 @@ html, body {
 } */
 * {
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 header {
   top: 0;
   left: 0;
   width: 100%;
   position: fixed;
-  z-index: 1000;
+  z-index: 0;
 }
 
 
 #br {
   display: none;
 }
-
 nav {
   width: 100%;
   height: 80px;
@@ -38,35 +44,6 @@ nav {
   align-items: center;
   background-color: black;
   overflow: hidden;
-}
-.divya_h1 {
-  width: 100vw;  /* Full width of the viewport */
-  overflow: hidden; /* Hides any extra content */
-  white-space: nowrap; /* Prevents text from breaking */
-  text-overflow: ellipsis; /* Adds "..." if text overflows */
-}
-
-.fas.fa-envelope {
-  overflow: hidden; 
-  display: inline-block; /* Prevents it from breaking layout */
-  white-space: nowrap;
-}
-.glyphicon-chevron-left{
-  overflow: hidden;
-}
-.glyphicon-chevron-right{
-  overflow: hidden;
-}
-
-label.logo {
-  font-size: 27px;
-  color: white;
-  margin: 0 20px;
-  /* Adjust margin as needed */
-  line-height: 80px;
-  vertical-align: middle;
-  float: left;
-  margin-left: 10% !important;
 }
 
 nav ul {
@@ -81,103 +58,93 @@ nav ul li {
   /* Adjust margin as needed */
 }
 
-nav ul li #anchor,
-#home_anchor {
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  text-transform: capitalize;
-  padding: 0 20px;
-  display: block;
+nav ul li #anchor,#home_anchor {
+  text-decoration: none !important;
+  color: white !important;
+  font-size: 20px !important;
+  text-transform: capitalize !important;
+  padding: 0 15px !important;
+  display: block !important;
 }
 
-#home_anchor,
+nav ul li #home_anchor,
 #anchor:hover {
-  text-decoration: underline;
-  color: white;
-  animation-name: hover_ani;
-  /* Specify the name of the keyframes animation */
-  animation-duration: 2s;
-  font-size: 25px;
+  text-decoration: underline !important;
+  color: white !important;
 }
-
-@keyframes hover_ani {
-  0% {
-    transform: scale(0.5);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-
 
 #checkbtn {
   display: none;
-  margin-top: 20px;
 }
 
 #check {
   display: none;
 }
-
+label.logo{
+  color:white;
+  font-weight: bold;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  line-height: 80px;
+  margin-left: 20px !important;
+  overflow: hidden !important;
+}
 @media (max-width: 1024px) {
   label.logo {
-    display: block;
-    margin: 0;
-    line-height: 80px;
-    text-align: center;
+      display: block;
+      margin: 0;
+      line-height: 80px;
+      text-align: center;
+  }
+  nav {
+    width: 100%;
+    height: 80px;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    overflow: hidden;
   }
 
   nav ul {
-    position: relative;
-    width: 100%;
-    top: 0px;
-    /* Adjusted to leave space for the sections above */
-    left: 0px !important;
-    background-color: #f8f9fa;
-    transition: left 0.5s ease !important;
-    transition-delay: 3s !important;
-
-
+      position: absolute;
+      width: 100%;
+      top: 80px;
+      /* Adjusted to leave space for the sections above */
+      left: -100%;
+      background-color: black;
+      transition: left 0.5s ease;
   }
-  nav ul li{
-    margin-right:6%;
-  }
-
 
   nav ul #home_anchor {
-    background-color: #f8f9fa;
-    color: white;
-    left: 0;
+      text-decoration: underline !important;
+      color: white !important;
+      left: 0;
   }
 
   #check:checked~ul {
-    left: 0;
+      left: 0;
   }
 
   #checkbtn {
-    display: block;
-    float: right;
-    line-height: 80px;
-    margin-right: 20px;
-    /* Adjust margin as needed */
-    font-size: 30px;
-    color: white;
+      position: relative;
+      display: block;
+      float: right;
+      line-height: 80px !important;
+      margin-right: 20px;
+      margin-top: 25px;
+      /* Adjust margin as needed */
+      font-size: 30px;
+      color: white;
+      overflow: hidden;
   }
 
   nav ul li {
-    display: block;
-    text-align: center;
-    line-height: 100px;
-
-  }
-  nav ul li label a{
-    font-size: xx-large !important;
+      display: block;
+      text-align: center;
+      line-height: 50px;
+      margin: 15px;
   }
 }
-
 
 
 
@@ -238,12 +205,12 @@ nav ul li #anchor,
   text-align: center;
   position: relative;
   background-color: #f8f9fa;
-  margin-top: 0px !important;
+  margin-top: 0px ;
   box-shadow: 1px 1px 5px grey;
   overflow: hidden;
   width: 100%;
   height: 70%;
-  margin-top: 0px !important;
+  margin-top: 0px;
   
 }
 #about{
@@ -260,6 +227,7 @@ nav ul li #anchor,
   animation-duration: 10s;
   animation-iteration-count: infinite;
   margin-top: -3%;
+  overflow: hidden;
 }
 
 
@@ -443,8 +411,14 @@ nav ul li #anchor,
   cursor: pointer;
 }
 
-.left-carousel-control {
+.carousel-control {
   line-height: 300px;
+}
+.glyphicon-chevron-right{
+  overflow: hidden;
+}
+.glyphicon-chevron-left{
+  overflow: hidden;
 }
 #myCarousel{
   overflow: hidden !important;
@@ -685,6 +659,48 @@ nav ul li #anchor,
   margin: 0 auto;
 }
 
+#contact-form label {
+  margin-bottom: 5px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#contact-form textarea {
+  height: 100px;
+}
+
+#contact-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#contact-form button:hover {
+  background-color: #ddd;
+  color: #333;
+}
+
+#name {
+  color: black;
+}
+
+#email {
+  color: black;
+}
+
+#message {
+  color: black;
+}
 
 @media(max-width: 480px) {
 
@@ -777,7 +793,13 @@ nav ul li #anchor,
     padding-bottom: 10px;
   }
 
-  
+  input {
+    width: 100%;
+  }
+
+  textarea {
+    width: 100%;
+  }
   .prev-button,
   .next-button {
     display: none;
@@ -822,6 +844,10 @@ nav ul li #anchor,
     height:fit-content;
 
 
+  }
+  .divya_h2 {
+    font-size: 300% !important;
+    margin-bottom: 200px;
   }
 
   #test_div {
@@ -904,11 +930,17 @@ nav ul li #anchor,
     text-align: center;
     height: fit-content;
     padding-bottom: 10px;
-    margin-top: 0px !important;
+    margin-top: 0px ;
     font-size: 12px;
   }
 
+  input {
+    width: 100%;
+  }
 
+  textarea {
+    width: 100%;
+  }
 
   #Contact {
     text-align: center;
@@ -946,6 +978,9 @@ nav ul li #anchor,
     font-size: 300% !important;
   }
 
+  .divya_h2 {
+    font-size: 300% !important;
+  }
 
   #test_div {
     position: relative;
@@ -1030,10 +1065,16 @@ nav ul li #anchor,
     text-align: center;
     height: fit-content;
     padding-bottom: 10px;
-    margin-top: 0px !important;
+    margin-top: 0px ;
   }
 
+  input {
+    width: 100%;
+  }
 
+  textarea {
+    width: 100%;
+  }
 
   #Contact {
     text-align: center;
@@ -1171,9 +1212,16 @@ nav ul li #anchor,
     text-align: center;
     height: fit-content;
     padding-bottom: 10px;
-    margin-top: -30% !important;
+    margin-top: 0px;
   }
 
+  input {
+    width: 100%;
+  }
+
+  textarea {
+    width: 100%;
+  }
 
   #Contact {
     text-align: center;
@@ -1231,7 +1279,7 @@ nav ul li #anchor,
     height: 20% !important;
   }
   #introduction{
-    margin-top: 0px !important;
+    margin-top: 0px ;
   }
   nav ul li label a{
     color:white !important;
@@ -1250,6 +1298,9 @@ nav ul li #anchor,
     font-size: 300% !important;
   }
 
+  .divya_h2 {
+    font-size: 300% !important;
+  }
 
   #test_div {
     position: relative;
@@ -1334,10 +1385,16 @@ nav ul li #anchor,
     text-align: center;
     height: fit-content;
     padding-bottom: 10px;
-    margin-top: 0px !important;
+    margin-top: 0px ;
   }
 
+  input {
+    width: 100%;
+  }
 
+  textarea {
+    width: 100%;
+  }
 
   #Contact {
     text-align: center;
@@ -1386,7 +1443,7 @@ nav ul li #anchor,
   #introduction {
     position: relative;
     background-color: #f8f9fa;
-    margin-top: 0px !important;
+    margin-top: 0px ;
 
     overflow: hidden;
     width: 100%;
@@ -1419,7 +1476,7 @@ nav ul li #anchor,
   margin-left:-20%;
   overflow: hidden;
 }
-#footer span a{
+#footer span a i{
   overflow: hidden;
 }
 #footer_h{

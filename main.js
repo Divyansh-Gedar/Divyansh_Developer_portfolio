@@ -1,34 +1,17 @@
-window.onload = function() {
-  if (window.innerWidth <= 1024) {
-    document.getElementById("hamburger").style.display = "none";
-    document.getElementById("introduction").style.marginTop = "0";
-  }
-};
-
-document.getElementById("introduction").style.marginTop = 0;
+check_value = document.getElementById("check").checked;
 
 
-function margin_check() {
-  let check_value = document.getElementById("check").checked;
-  let navbar_height = document.getElementById("hamburger").offsetHeight;
-
-  if (window.innerWidth <= 1024) {  // Only for mobile
-      if (check_value) {
-          document.getElementById("hamburger").style.display = "block";
-          document.getElementById("introduction").style.marginTop = navbar_height + "px";
-      } else {
-          document.getElementById("hamburger").style.display = "none";
-          document.getElementById("introduction").style.marginTop = "0";
-      }
-  } else {
-      document.getElementById("hamburger").style.display = "block"; // Always visible on desktop
-  }
+function margin_check(){
+    check_value = document.getElementById("check").checked;
+    console.log(check_value);
+    navbar_height = document.getElementById("hamburger").offsetHeight;
+    console.log(navbar_height)
+    if(check_value){
+        document.getElementById("introduction").style.marginTop = navbar_height + "px"; 
+    }else{
+        document.getElementById("introduction").style.marginTop = 0;
+    }
 }
-
-// Run when window resizes (fixes issue when switching between mobile & desktop)
-window.addEventListener("resize", margin_check);
-
-
 
 
 
