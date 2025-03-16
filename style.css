@@ -76,6 +76,11 @@ nav ul li #home_anchor,
 #checkbtn {
   display: none;
 }
+.calendly-inline-widget {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 320px;
+}
 
 #check {
   display: none;
